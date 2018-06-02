@@ -1,0 +1,10 @@
+[package]
+name = "sms_freemobile_api"
+version = "0.1.0"
+authors = ["Christian FOUCHER <christian.foucher@medianesysteme.com>"]
+
+[dependencies]
+reqwest = "0.8"
+toml = "*"
+serde = "*"
+serde_derive = "*"

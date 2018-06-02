@@ -1,0 +1,15 @@
+[[account]]
+name = "cf"
+login = "12345678"
+password = "p@ssw0rd_CF___"
+
+[[account]]
+name = "mf"
+login = "876534321"
+password = "p@ssw0rd_MF___"
+
+[[account]]
+name = "ac"
+login = "11111111"
+password = "p@ssw0rd_AC___"
+
