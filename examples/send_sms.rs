@@ -1,6 +1,4 @@
-extern crate sms_free_api;
-
-use sms_free_api::sms_service::SmsService;
+use sms_freemobile_api::sms_service::SmsService;
 
 fn main() {
     let sms = SmsService::new("Accounts.toml");

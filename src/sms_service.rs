@@ -1,12 +1,7 @@
-extern crate reqwest;
+use reqwest;
+use serde_derive::*;
 
-extern crate serde_derive;
-extern crate toml;
-
-use std::fs::File;
-use std::io::prelude::*;
-
-use std::collections::HashMap;
+use std::{collections::HashMap, fs::File, io::prelude::*};
 
 #[derive(Deserialize)]
 struct TAccount {
@@ -72,11 +67,13 @@ impl SmsService {
             .send();
 
         match resp {
-            Ok(resp_unwrapped) => if resp_unwrapped.status().is_success() {
-                Ok("Message sent".to_string())
-            } else {
-                Err("Sms error".to_string())
-            },
+            Ok(resp_unwrapped) => {
+                if resp_unwrapped.status().is_success() {
+                    Ok("Message sent".to_string())
+                } else {
+                    Err("Sms error".to_string())
+                }
+            }
             Err(_) => Err("Invalid answer".to_string()),
         }
     }
